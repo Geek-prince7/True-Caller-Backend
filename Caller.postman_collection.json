@@ -1,0 +1,205 @@
+{
+	"info": {
+		"_postman_id": "96129494-8be5-43ec-b076-3b28d27925c2",
+		"name": "Caller",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20368024"
+	},
+	"item": [
+		{
+			"name": "Register user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Ronaldo",
+							"type": "text"
+						},
+						{
+							"key": "pwd",
+							"value": "princee",
+							"type": "text"
+						},
+						{
+							"key": "cnf_pwd",
+							"value": "princee",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "7777777777",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/api/user/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjEsInBob25lIjoiODQ0ODgyNDM3NyIsInBlcnNvbl9uYW1lIjoiUHJpbmNlIGR1YmV5IiwiZW1haWwiOm51bGwsInBhc3MiOiJwcmluY2UifSwiaWF0IjoxNjc0MzM0OTI3LCJleHAiOjE2NzQ2OTQ5MjcsInN1YiI6IjEifQ.1fN9XaSeHIgR-CUnMbVRLMAdv7xLal4-pVNBu_ts1wk",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "phone",
+							"value": "8448824376",
+							"type": "text"
+						},
+						{
+							"key": "pwd",
+							"value": "princee",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/api/user/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add spam",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjEsInBob25lIjoiODQ0ODgyNDM3NyIsInBlcnNvbl9uYW1lIjoiUHJpbmNlIGR1YmV5IiwiZW1haWwiOm51bGwsInBhc3MiOiJwcmluY2UifSwiaWF0IjoxNjc0MzM5NDAzLCJleHAiOjE2NzQ2OTk0MDMsInN1YiI6IjEifQ.aJxlY5uaUU3H-5ngumAu-J-ZtJbC8ISn16dI3wqiVx4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8000/api/user/mark-spam/8448824331",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"mark-spam",
+						"8448824331"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search by Name",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjEsInBob25lIjoiODQ0ODgyNDM3NyIsInBlcnNvbl9uYW1lIjoiUHJpbmNlIGR1YmV5IiwiZW1haWwiOm51bGwsInBhc3MiOiJwcmluY2UifSwiaWF0IjoxNjc0MzM5NDAzLCJleHAiOjE2NzQ2OTk0MDMsInN1YiI6IjEifQ.aJxlY5uaUU3H-5ngumAu-J-ZtJbC8ISn16dI3wqiVx4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8000/api/search/name/prince",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"search",
+						"name",
+						"prince"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search by Phone",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjEsInBob25lIjoiODQ0ODgyNDM3NyIsInBlcnNvbl9uYW1lIjoiUHJpbmNlIGR1YmV5IiwiZW1haWwiOm51bGwsInBhc3MiOiJwcmluY2UifSwiaWF0IjoxNjc0MzM5NDAzLCJleHAiOjE2NzQ2OTk0MDMsInN1YiI6IjEifQ.aJxlY5uaUU3H-5ngumAu-J-ZtJbC8ISn16dI3wqiVx4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8000/api/search/phone/8448824377",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"search",
+						"phone",
+						"8448824377"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user Detail",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjIsInBob25lIjoiODQ0ODgyNDM3NiIsInBlcnNvbl9uYW1lIjoiS2xhdXMiLCJlbWFpbCI6bnVsbCwicGFzcyI6InByaW5jZWUifSwiaWF0IjoxNjc0MzUwNTc1LCJleHAiOjE2NzQ3MTA1NzUsInN1YiI6IjIifQ.GclIjwS-Em5Wnc3WIOCEZBAgIzA2dh4DM839LJyFq-c",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8000/api/user/get-detail/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"get-detail",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
